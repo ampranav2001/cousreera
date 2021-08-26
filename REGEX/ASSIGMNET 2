@@ -11,7 +11,7 @@ def f_name(str):
 
 print(f_name(a))
 
-Extract the first word from every string from a list of strings by using map function.
+Q3 Extract the first word from every string from a list of strings by using map function.
 
 F9 = ['CRISYANO', 'MESSI', 'SERGIO RAMOS', 'BRUNO FERNADES']
 list(map(lambda s: s.split()[0], F9))
