@@ -1,0 +1,96 @@
+QUESTION 1
+
+n = int(input())
+for i in range(n):
+    for j in range(n-i):
+        print(n,end=' ')
+    print()
+
+
+QUESTION 2
+
+n = int(input())
+for i in range(n):
+    print('0',end=' ')
+    for j in range(n-i):
+        print(j+1,end=' ')
+    print()
+    
+    QUESTION 3
+    n = int(input())
+for i in range(n):
+    for j in range(i+1):
+        print((2*i)+1, end=' ')
+    print()
+    
+    QUESTION 4
+    
+    n = int(input())
+for i in range(n):
+    for j in range(i+1, 0, -1):
+        print(j, end=' ')
+    print()
+    
+    QUESTION 5
+    
+    n = int(input())
+count, next_count = 0,0
+for i in range(1, n+1):
+    count = i+next_count
+    next_count = count
+    for j in range(i):
+        print(count, end=' ')
+        count-=1
+    print()
+    
+    QUESTION 6
+    
+    
+    def factorial(n):
+    if n <= 1 :
+        return 1
+    return n*factorial(n-1)
+
+n = int(input())
+
+for i in range(n):
+    for j in range(i+1):
+        print(factorial(i)//(factorial(j)*factorial(i-j)), end=" ")
+    print()
+    
+    QUESTION 7
+    
+    n = int(input())
+for i in range(1, n+1):
+    for j in range(i):
+        print(i,end=' ')
+    for j in range(i+1,n+1):
+        print(j, end=' ')
+    print()
+    
+    QUESTION 8
+    n = int(input())
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(i*j, end=' ')
+    print()
+    
+    QUESTION 9
+    
+    n = int(input())
+for i in range(n):
+    for j in range(i):
+        print('', end=' ')
+    for j in range(n-i):
+        print('*',end=' ')
+    print()
+    
+    QUESTION 10
+    
+    n = int(input())
+for i in range(n) :
+    for j in range(n-i):
+        print(end=' ')
+    for j in range(i+1):
+        print('*', end=' ')
+    print()
