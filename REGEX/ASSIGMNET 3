@@ -1,0 +1,34 @@
+Q1. Write a function to return nth term of Fibonacci sequence.
+
+def fib(n) :
+    if(n<0) :
+        return("incorrect input")
+    elif(n==0):
+        return 0
+    elif(n==2 or n==1):
+        return 1
+    else : 
+        return (fib(n-1) + fib(n-2))
+
+x = int(input("Enter a Number : "))
+print(fib(x), end = " ")
+
+
+Q2. Write a function to find out GCD of two numbers using EUCLID'S algorithm.
+
+def GCD(a,b):
+    if b==0:
+        return a
+    else:
+        return GCD(b,a%b)
+num1=int(input("Enter first number : "))
+num2=int(input("Enter second number : "))
+print("GCD is : ", GCD(num1,num2))
+
+Q3. Write a function to find LCM of two number in most optimizers way.
+In [3]:
+def lcm(num1,num2):
+    return (num1//GCD(num1,num2))*num2
+num1=int(input("Enter first number : "))
+num2=int(input("Enter seconf number : "))
+print('Lcm of ',num1,"and",num2,'is :',lcm(num1,num2))
