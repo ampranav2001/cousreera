@@ -1,0 +1,51 @@
+Q1. Write a lambda expression to extract first word of a string.
+
+a = 'REAL MADRID HAS WON 13 UCL TROPHIES'
+b = lambda str: str.split()[0]
+b(a)
+
+Q2. Write a function to extract first word of s string (with many words separated by space)
+
+def f_name(str):
+    return str.split()[0]
+
+print(f_name(a))
+
+Extract the first word from every string from a list of strings by using map function.
+
+F9 = ['CRISYANO', 'MESSI', 'SERGIO RAMOS', 'BRUNO FERNADES']
+list(map(lambda s: s.split()[0], F9))
+
+
+Q4. Write a function to return a list of prime factors of a given number.
+
+def prime(x):
+    factors = []
+    divisor = 2
+    while divisor <= x:
+        if x%divisor == 0:
+            factors.append(divisor)
+            x = x/divisor 
+        else:
+            divisor += 1 
+    return factors
+
+num = input('Enter the number: ')
+print(prime(int(num)))
+
+
+Write a function that finds 2nd largest among 4 numbers (Repetitions are allowed, without sorting).
+
+
+def max_2(arr):
+    a = set(arr)
+    a = list(a)
+    b = max(a)
+    a.remove(b)
+    b = max(a)
+    return b
+
+l = input()
+l = l.split()
+l = list(map(int, l))
+print(max_2(l))
