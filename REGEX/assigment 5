@@ -23,7 +23,7 @@ print(str(sum))
 
 
 2). Given a list of integers, write a function to check whether the list is strictly increasing or not
-list = [2, 5, 7, 9, 10, 8]
+list = [2, 7,5,4,9,10]
   
 
 print ("Original list : " + str(list))
