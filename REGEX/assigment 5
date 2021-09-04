@@ -42,7 +42,7 @@ def checkExpanding(l):
   if (abs(l[i+2]-l[i+1])<=abs(l[i+1]-l[i])):
    return False
  return True
-ls2 = list(input('Enter the numbers separated by space: ').split(' '))
+ls2 = (input('Enter the numbers separated by space: ').split(' '))
 ls2 = [int(i) for i in ls2]
 if checkExpanding(ls2):
     print('The list is expanding')
@@ -64,4 +64,4 @@ def permute(prefix, given_string, max_len):
         for i in range(len(given_string)):
             permute(prefix + given_string[i], given_string[:i] + given_string[i+1:], max_len)
             
-print(all_permutations('xyz'))
+print(all_permutations('abc'))
