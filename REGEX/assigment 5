@@ -1,0 +1,71 @@
+
+1). Given a list of integers, write a function to return the sum of all prime numbers in that list.
+
+
+prime_n=input("").split(' ')
+sum=0
+for n in prime_n:
+    n=int(n)
+    isPrime=True
+    if n > 1:
+       
+        for i in range(2, n):
+            if (n % i) == 0:
+                isPrime=False
+                break
+        if isPrime:
+            sum+=n
+
+
+
+print(str(sum))
+
+
+
+2). Given a list of integers, write a function to check whether the list is strictly increasing or not
+list = [2, 5, 7, 9, 10, 8]
+  
+
+print ("Original list : " + str(list))
+  
+result = all(i < j for i, j in zip(list,list[1:]))
+  
+
+print ("Is the list strictly increasing ? : " + str(result))
+
+
+3). Write a function to check whether a given list is expanding or not (the difference between adjacent elements should keep on increasing).
+
+def expand(m):
+    a = abs(m[1] - m[0])
+    b = abs(m[2] - m[1])
+    
+    if a >= b:
+        return False
+    
+    else:
+        for i in range(3,len(m)):
+            c = abs(m[i] - m[i-1])
+            if c <= b:
+                return False
+            b = c
+        else:
+            return True
+            
+            
+            
+    4). Write a function to calculate all permutations of a given string. (Without using itertools)
+    
+    
+    def all_permutations(given_string):
+    for i in range(len(given_string)):
+        permute('', given_string, i+1)
+
+def permute(prefix, given_string, max_len):
+    if len(given_string) <= 0 or len(prefix) >= max_len:
+        print(prefix)
+    else:
+        for i in range(len(given_string)):
+            permute(prefix + given_string[i], given_string[:i] + given_string[i+1:], max_len)
+            
+print(all_permutations('xyz'))
